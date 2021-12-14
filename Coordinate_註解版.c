@@ -55,7 +55,7 @@ void split(char str[], int len){
     // printf("even hex len: %d, odd hex len :%d \n", strlen(even_hex), strlen(odd_hex));
     // printf("-------------------------\n");
 
-    // save the data
+    // print the data or recurrsive
     if (strlen(odd_hex) <= 1) {
         printf("%c", odd_hex[0]);
     }else
