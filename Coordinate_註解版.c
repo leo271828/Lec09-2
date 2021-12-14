@@ -3,9 +3,6 @@
 #include<string.h>
 #define N 15000
 
-char odd_final[N], even_final[N];
-int odd_total=0, even_total=0;
-
 void split(char str[], int len){
     char even_str[len], odd_str[len];
     int even_len=0, odd_len=0;
@@ -60,15 +57,11 @@ void split(char str[], int len){
 
     // save the data
     if (strlen(odd_hex) <= 1) {
-        odd_final[odd_total++] = odd_hex[0];
         printf("%c", odd_hex[0]);
-        // printf("odd final : %s \n", odd_final);
     }else
         split(odd_hex, strlen(odd_hex));
     if (strlen(even_hex) <= 1) {
-        even_final[even_total++] = even_hex[0];
         printf("%c", even_hex[0]);
-        // printf("even final : %s \n", even_final);
     }else   
         split(even_hex, strlen(even_hex));
 }
@@ -77,9 +70,5 @@ int main(){
     scanf("%s", str);
     int len = strlen(str);
     split(str, len);
-    // for(int i=0;i<even_total;i++){
-    //     printf("%c", odd_final[i]);
-    //     printf("%c", even_final[i]);
-    // }
     return 0;
 }
