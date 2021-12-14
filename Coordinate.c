@@ -49,7 +49,7 @@ void split(char str[], int len){
     sprintf(even_hex, "%x", even_sum);
     sprintf(odd_hex, "%x", odd_sum);
 
-    // save the data
+    // print the data or recurrsive
     if (strlen(odd_hex) <= 1)
         printf("%c", odd_hex[0]);
     else
